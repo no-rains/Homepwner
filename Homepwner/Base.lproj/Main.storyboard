@@ -105,7 +105,7 @@
         <!--Detail View Controller-->
         <scene sceneID="HRI-3w-9yv">
             <objects>
-                <viewController id="FPw-o0-Pb2" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="FPw-o0-Pb2" customClass="DetailViewController" customModule="Homepwner" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uTN-N7-uSr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
