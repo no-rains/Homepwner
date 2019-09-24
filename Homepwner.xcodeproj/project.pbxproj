@@ -17,6 +17,7 @@
 		960050A3232F060A007D102D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960050A2232F060A007D102D /* Item.swift */; };
 		960050A5232F0B10007D102D /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960050A4232F0B10007D102D /* ItemStore.swift */; };
 		9617BC162334474F00EF3C53 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9617BC152334474F00EF3C53 /* ItemCell.swift */; };
+		96F5E4D923398BF100D0130E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F5E4D823398BF100D0130E /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		960050A2232F060A007D102D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		960050A4232F0B10007D102D /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
 		9617BC152334474F00EF3C53 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		96F5E4D823398BF100D0130E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				960050A2232F060A007D102D /* Item.swift */,
 				960050A4232F0B10007D102D /* ItemStore.swift */,
 				9617BC152334474F00EF3C53 /* ItemCell.swift */,
+				96F5E4D823398BF100D0130E /* DetailViewController.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				960050A1232F0455007D102D /* ItemsViewController.swift in Sources */,
 				960050A3232F060A007D102D /* Item.swift in Sources */,
 				960050A5232F0B10007D102D /* ItemStore.swift in Sources */,
+				96F5E4D923398BF100D0130E /* DetailViewController.swift in Sources */,
 				96005071232F0351007D102D /* AppDelegate.swift in Sources */,
 				9617BC162334474F00EF3C53 /* ItemCell.swift in Sources */,
 			);
