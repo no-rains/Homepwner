@@ -12,6 +12,13 @@ class ItemViewController: UITableViewController
 {
     var itemStore: ItemStore!
     
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder:aDecoder)
+        
+        navigationItem.leftBarButtonItem = editButtonItem
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return itemStore.allItems.count
@@ -21,17 +28,11 @@ class ItemViewController: UITableViewController
     {
         super.viewDidLoad()
         
-        let statusBarHeight = UIApplication.shared.statusBarFrame.height
-        
-        let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
-        tableView.contentInset = insets
-        tableView.scrollIndicatorInsets = insets
-        
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 65
     }
     
-    @IBAction func addNewItem(_ sender: UIButton)
+    @IBAction func addNewItem(_ sender: UIBarButtonItem)
     {
         let newItem = itemStore.createItem()
         
@@ -42,21 +43,7 @@ class ItemViewController: UITableViewController
         }
     }
     
-    @IBAction func toggleEditingMode(_ sender: UIButton)
-    {
-        if isEditing
-        {
-            sender.setTitle("Edit", for: .normal)
-            
-            setEditing(false, animated: true)
-        }
-        else
-        {
-            sender.setTitle("Done", for: .normal)
-            
-            setEditing(true, animated: true)
-        }
-    }
+    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -122,5 +109,12 @@ class ItemViewController: UITableViewController
             default:
                 preconditionFailure("Unexpected segue identifier.")
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
     }
 }
