@@ -86,8 +86,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="yeP-Zh-L8K">
-                                <rect key="frame" x="8" y="52" width="359" height="607"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yeP-Zh-L8K">
+                                <rect key="frame" x="8" y="52" width="359" height="563"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dNx-ZM-Bau">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="34"/>
@@ -109,7 +109,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="476-2G-cae">
-                                        <rect key="frame" x="0.0" y="42" width="359" height="34"/>
+                                        <rect key="frame" x="0.0" y="35" width="359" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Cc-Js-InZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="43" height="34"/>
@@ -128,7 +128,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Lt0-BI-LSx">
-                                        <rect key="frame" x="0.0" y="84" width="359" height="34"/>
+                                        <rect key="frame" x="0.0" y="70" width="359" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="evr-dV-6PC">
                                                 <rect key="frame" x="0.0" y="0.0" width="42" height="34"/>
@@ -147,24 +147,43 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hem-mc-jDE">
-                                        <rect key="frame" x="0.0" y="126" width="359" height="481"/>
+                                        <rect key="frame" x="0.0" y="105" width="359" height="20.5"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="MPj-fd-m4P">
+                                        <rect key="frame" x="0.0" y="126.5" width="359" height="436.5"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="4Cc-Js-InZ" firstAttribute="leading" secondItem="evr-dV-6PC" secondAttribute="leading" id="HOf-t9-UDf"/>
                                     <constraint firstItem="1xj-Fb-h17" firstAttribute="leading" secondItem="4Cc-Js-InZ" secondAttribute="leading" id="rhD-QY-Au5"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mH0-AU-ZhW">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ZN6-8t-bec"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="kuu-7f-TS5">
+                                        <connections>
+                                            <action selector="takePicture:" destination="FPw-o0-Pb2" id="6Pt-Wz-aIx"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="yeP-Zh-L8K" firstAttribute="leading" secondItem="jmf-Z9-tAO" secondAttribute="leading" constant="8" id="0b6-ig-8RO"/>
-                            <constraint firstItem="jmf-Z9-tAO" firstAttribute="bottom" secondItem="yeP-Zh-L8K" secondAttribute="bottom" constant="8" id="aAu-jJ-Zy3"/>
+                            <constraint firstItem="mH0-AU-ZhW" firstAttribute="leading" secondItem="jmf-Z9-tAO" secondAttribute="leading" id="9hs-in-bXJ"/>
+                            <constraint firstItem="mH0-AU-ZhW" firstAttribute="trailing" secondItem="jmf-Z9-tAO" secondAttribute="trailing" id="FjD-32-VUg"/>
+                            <constraint firstItem="mH0-AU-ZhW" firstAttribute="top" secondItem="yeP-Zh-L8K" secondAttribute="bottom" constant="8" id="Pbf-9d-a8V"/>
                             <constraint firstItem="yeP-Zh-L8K" firstAttribute="trailing" secondItem="jmf-Z9-tAO" secondAttribute="trailing" constant="-8" id="oqZ-kM-9Yp"/>
+                            <constraint firstItem="jmf-Z9-tAO" firstAttribute="bottom" secondItem="mH0-AU-ZhW" secondAttribute="bottom" id="wvv-wt-DXC"/>
                             <constraint firstItem="yeP-Zh-L8K" firstAttribute="top" secondItem="jmf-Z9-tAO" secondAttribute="top" constant="8" id="z5U-mN-4Jr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="jmf-Z9-tAO"/>
@@ -175,6 +194,7 @@
                     <navigationItem key="navigationItem" id="NWP-8X-D3g"/>
                     <connections>
                         <outlet property="dateLabel" destination="Hem-mc-jDE" id="rlf-R0-t9Z"/>
+                        <outlet property="imageView" destination="MPj-fd-m4P" id="rTP-E4-3Yq"/>
                         <outlet property="nameField" destination="d0y-07-3KD" id="1ig-91-cSn"/>
                         <outlet property="serialNumberField" destination="hAi-9n-qIK" id="MW7-Vn-QcK"/>
                         <outlet property="valueField" destination="Ojd-ub-BR3" id="dkt-Ji-Ebc"/>
